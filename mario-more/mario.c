@@ -21,11 +21,24 @@ int main(void)
             printf(" ");
         }
 
-        // Print out hashes
+        // Print out hashes for first pyramid
         for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
+
+        // Print out spacing in between pyramids
+        for (int l = 0; l < 2; l++)
+        {
+            printf(" ");
+        }
+
+        // Print out hashes for second pyramid
+        for (int k = 0; k <= i; k++)
+        {
+            printf("#");
+        }
+
         printf("\n");
     }
 }
