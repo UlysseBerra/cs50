@@ -1,16 +1,17 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool isInvalid(long n);
+
 int main(void)
 {
     long n = get_long("Number: ");
-    double first_digit = n;
+    isInvalid(n);
 
-    while (first_digit >= 10)
-    {
-        first_digit = n / 10;
-    }
+}
 
-    printf("%li", n);
-    printf("%f", first_digit);
+bool isInvalid(long n)
+{
+    printf("%li\n", n%100);
+    return true;
 }
