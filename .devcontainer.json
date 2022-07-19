@@ -1,8 +1,9 @@
 {
   "extensions": [
     "/opt/cs50/extensions/cs50-0.0.1.vsix", 
-    "/opt/cs50/extensions/ddb50-0.0.1.vsix", 
     "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix", 
+    "cs50.ddb50", 
+    "cs50.extension-uninstaller", 
     "ms-python.python", 
     "ms-vscode.cpptools", 
     "ms-vscode.hexeditor", 
@@ -10,7 +11,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:96f79e22540980ba2429b3ca051314f82bc265c6", 
+  "image": "ghcr.io/cs50/codespace:1c901aa26166aa413bb3c153fa2e3082254dbc94", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
@@ -32,7 +33,7 @@
     "editor.parameterHints.enabled": false, 
     "editor.quickSuggestions": false, 
     "editor.renderIndentGuides": false, 
-    "editor.renderWhitespace": "boundary", 
+    "editor.renderWhitespace": "selection", 
     "editor.selectionHighlight": false, 
     "editor.semanticTokenColorCustomizations": {
       "[Default Dark+]": {
@@ -49,6 +50,11 @@
       }
     }, 
     "editor.suggestOnTriggerCharacters": false, 
+    "extension-uninstaller.uninstall": [
+      "github.copilot", 
+      "github.copilot-nightly", 
+      "tabnine.tabnine-vscode"
+    ], 
     "extensions.ignoreRecommendations": true, 
     "files.autoSave": "afterDelay", 
     "files.exclude": {
@@ -94,6 +100,9 @@
     "terminal.integrated.tabs.showActiveTerminal": "never", 
     "window.autoDetectColorScheme": true, 
     "workbench.colorCustomizations": {
+      "[GitHub Light Default]": {
+        "terminal.foreground": "#000000"
+      }, 
       "editor.lineHighlightBorder": "#0000", 
       "editorError.foreground": "#0000", 
       "editorGutter.addedBackground": "#0000", 
