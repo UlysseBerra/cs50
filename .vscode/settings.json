@@ -3,6 +3,7 @@
         "*.html": "html",
         "*.css": "css",
         "*.js": "javascript",
-        "cs50.h": "c"
+        "cs50.h": "c",
+        "stdio.h": "c"
     }
 }
