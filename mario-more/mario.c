@@ -17,6 +17,10 @@ int main(void)
     {
         for (int j = 0; j <= i; j++)
         {
+            for (int k = 0; k <= j; k++)
+            {
+                printf(".");
+            }
             printf("#");
         }
         printf("\n");
