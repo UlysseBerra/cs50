@@ -4,6 +4,7 @@
 int main(void)
 {
     long n = get_long("Number: ");
+    char type;
 
     if ()
 }
