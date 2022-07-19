@@ -6,5 +6,5 @@ int main(void)
     do {
         long n = get_long("Number: ");
     }
-    while ()
+    while (n);
 }
