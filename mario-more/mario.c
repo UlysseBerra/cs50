@@ -12,14 +12,17 @@ int main(void)
     }
     while (n < 1 || n > 8);
 
-    // Prints out hashes
+    // Print out newlines
     for (int i = 0; i < n; i++)
     {
-        for (int k = 0; k < (n - i - 1); k++)
+        // Print out indentation
+        for (int j = 0; j < (n - i - 1); j++)
         {
             printf(" ");
         }
-        for (int j = 0; j <= i; j++)
+
+        // Print out hashes
+        for (int k = 0; k <= i; k++)
         {
             printf("#");
         }
