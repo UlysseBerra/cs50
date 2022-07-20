@@ -5,17 +5,14 @@ bool luhn(long n);
 
 int main(void)
 {
-    long n = get_long("Number: ");
+    string n = get_string("Number: ");
 
-    if (luhn(n) == false)
-    {
-        printf("INVALID\n");
-    }
+    if (n[-1] == n[12])
 }
 
 bool luhn(long n)
 {
-    
+
     bool result;
     return result;
 }
