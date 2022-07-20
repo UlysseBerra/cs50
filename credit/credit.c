@@ -5,15 +5,6 @@ bool luhn(long n);
 
 int main(void)
 {
-    string n = get_string("Number: ");
-    x = n / 10;
-    printf("%")
+    long n = get_long("Number: ");
+
 }
-
-bool luhn(long n)
-{
-
-    bool result;
-    return result;
-}
-
