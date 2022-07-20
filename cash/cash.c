@@ -35,6 +35,7 @@ int main(void)
     printf("%i\n", coins);
 }
 
+// Get the amount of cents owed
 int get_cents(void)
 {
     int cents = 0;
@@ -52,6 +53,7 @@ int get_cents(void)
     return cents;
 }
 
+// Find how many quarters
 int calculate_quarters(int cents)
 {
     int quarters = 0;
@@ -65,6 +67,7 @@ int calculate_quarters(int cents)
     return quarters;
 }
 
+// Find how many dimes
 int calculate_dimes(int cents)
 {
     int dimes = 0;
@@ -78,6 +81,7 @@ int calculate_dimes(int cents)
     return dimes;
 }
 
+// Find how many nickels
 int calculate_nickels(int cents)
 {
     int nickels = 0;
@@ -91,6 +95,7 @@ int calculate_nickels(int cents)
     return nickels;
 }
 
+// Find how many pennies
 int calculate_pennies(int cents)
 {
     int pennies = 0;
