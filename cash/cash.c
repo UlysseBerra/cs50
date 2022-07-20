@@ -50,6 +50,7 @@ int get_cents(void)
         }
     }
 
+    printf("%i\n", cents);
     return cents;
 }
 
@@ -64,6 +65,7 @@ int calculate_quarters(int cents)
         quarters++;
     }
 
+    printf("%i\n", quarters);
     return quarters;
 }
 
@@ -78,6 +80,7 @@ int calculate_dimes(int cents)
         dimes++;
     }
 
+    printf("%i\n", dimes);
     return dimes;
 }
 
@@ -92,6 +95,7 @@ int calculate_nickels(int cents)
         nickels++;
     }
 
+    printf("%i\n", nickels);
     return nickels;
 }
 
@@ -106,5 +110,6 @@ int calculate_pennies(int cents)
         pennies++;
     }
 
+    printf("%i\n", pennies);
     return pennies;
 }
