@@ -6,11 +6,15 @@ int main(void)
     // Get height from standard input
     int n;
 
-    do
+    while (true)
     {
         n = get_int("Height: ");
+
+        if (n > 1 && n < 8)
+        {
+            break;
+        }
     }
-    while (n < 1 || n > 8);
 
     // Print out newlines
     for (int i = 0; i < n; i++)
