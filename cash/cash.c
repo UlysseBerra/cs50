@@ -37,20 +37,43 @@ int main(void)
 
 int get_cents(void)
 {
-    // TODO
-    return 0;
+    while (true)
+    {
+        int cents = get_int("Change owed: ");
+
+        if (cents >= 0)
+        {
+            break;
+        }
+    }
+
+    return cents;
 }
 
 int calculate_quarters(int cents)
 {
-    // TODO
-    return 0;
+    int quarters;
+
+    for (int i = 0; cents < 25; i++)
+    {
+        cents = cents - 25
+        quarters++
+    }
+
+    return quarters;
 }
 
 int calculate_dimes(int cents)
 {
-    // TODO
-    return 0;
+    int dimes;
+
+    for (int i = 0; cents < 10; i++)
+    {
+        cents = cents - 10
+        dimes++
+    }
+
+    return dimes;
 }
 
 int calculate_nickels(int cents)
