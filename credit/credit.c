@@ -6,8 +6,8 @@ bool luhn(long n);
 int main(void)
 {
     string n = get_string("Number: ");
-
-    if (n[-1] == n[12])
+    x = n / 10;
+    printf("%")
 }
 
 bool luhn(long n)
