@@ -28,7 +28,7 @@ int main(void)
     } else if (index >= 16)
     {
         printf("Grade 16+\n");
-    } else { printf("Grade %i\n", (int)index); }
+    } else { printf("Grade %i\n", (int)round(index)); }
 }
 
 // finds the number of letters
