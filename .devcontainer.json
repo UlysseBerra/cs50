@@ -2,6 +2,7 @@
   "extensions": [
     "/opt/cs50/extensions/cs50-0.0.1.vsix", 
     "/opt/cs50/extensions/phpliteadmin-0.0.1.vsix", 
+    "/opt/cs50/extensions/workspace-layout-0.0.7.vsix", 
     "cs50.ddb50", 
     "cs50.extension-uninstaller", 
     "ms-python.python", 
@@ -11,7 +12,7 @@
     "tomoki1207.pdf", 
     "vsls-contrib.gitdoc"
   ], 
-  "image": "ghcr.io/cs50/codespace:1c901aa26166aa413bb3c153fa2e3082254dbc94", 
+  "image": "ghcr.io/cs50/codespace:8fd6e6735968c4923888c43aafa343fbc6570831", 
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand", 
   "settings": {
     "C_Cpp.autocomplete": "Disabled", 
