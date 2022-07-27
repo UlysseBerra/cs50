@@ -25,7 +25,7 @@ int main(void)
     printf("Grade %i\n", (int) index);
 }
 
-// gets the number of letters
+// finds the number of letters
 int get_letters(string in)
 {
     int letters = 0;
@@ -43,7 +43,7 @@ int get_letters(string in)
     return letters;
 }
 
-// gets the number of words
+// finds the number of words
 int get_words(string in)
 {
     int words = 0;
@@ -62,7 +62,7 @@ int get_words(string in)
     return words;
 }
 
-// gets the number of sentences
+// finds the number of sentences
 int get_sentences(string in)
 {
     int sentences = 0;
