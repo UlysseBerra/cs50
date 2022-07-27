@@ -1,4 +1,11 @@
-#include "readability.h"
+#include <cs50.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <math.h>
+
+int get_letters(string in);
+int get_sentences(string in);
+int get_words(string in);
 
 int main(void)
 {
@@ -16,11 +23,11 @@ int main(void)
 
     // prints out grade level
     float L = ((float)letters / words) * 100;
-    printf("%f\n", L);
+    // printf("%f\n", L);
     float S = ((float)sentences / words) * 100;
-    printf("%f\n", S);
+    // printf("%f\n", S);
     float index = (0.0588 * L) - (0.296 * S) - 15.8;
-    printf("%f\n", index);
+    // printf("%f\n", index);
 
     if (index < 1)
     {
