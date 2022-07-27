@@ -20,7 +20,7 @@ int main(void)
     float S = ((float)sentences / words)*100;
     printf("%f\n", S);
     float index = (0.0588 * L) - (0.296 * S) - 15.8;
-    // printf("%f\n", index);
+    printf("%f\n", index);
 
     printf("Grade %i\n", (int) index);
 }
