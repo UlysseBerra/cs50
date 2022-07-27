@@ -84,7 +84,7 @@ int get_words(string in)
 int get_sentences(string in)
 {
     int sentences = 0;
-    int i = 0;
+    int c = 0;
 
     while (in[i] != '\0')
     {
@@ -93,7 +93,7 @@ int get_sentences(string in)
         {
             sentences++;
         }
-        i++;
+        c++;
     }
 
     return sentences;
