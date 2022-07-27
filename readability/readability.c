@@ -2,26 +2,30 @@
 
 int main(void)
 {
+    // gets input from user
     string in = get_string("Text: ");
 
+    // gets values from functions
     int letters = get_letters(in);
     int words = get_words(in);
     int sentences = get_sentences(in);
 
-    printf("%i\n", letters);
-    printf("%i\n", words);
-    printf("%i\n", sentences);
+    // printf("%i\n", letters);
+    // printf("%i\n", words);
+    // printf("%i\n", sentences);
 
+    // prints out grade level
     float L = (float) (letters / words)*100;
-    printf("%f\n", L);
+    // printf("%f\n", L);
     float S = (float) (sentences / words)*100;
-    printf("%f\n", S);
+    // printf("%f\n", S);
     float index = (0.0588 * L) - (0.296 * S) - 15.8;
-    printf("%f\n", index);
+    // printf("%f\n", index);
 
-    printf("Grade %f\n", index);
+    printf("Grade %i\n", (int) index);
 }
 
+// gets the number of letters
 int get_letters(string in)
 {
     int letters = 0;
@@ -39,6 +43,7 @@ int get_letters(string in)
     return letters;
 }
 
+// gets the number of words
 int get_words(string in)
 {
     int words = 0;
@@ -57,6 +62,7 @@ int get_words(string in)
     return words;
 }
 
+// gets the number of sentences
 int get_sentences(string in)
 {
     int sentences = 0;
