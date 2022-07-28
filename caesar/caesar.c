@@ -8,9 +8,11 @@ string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    for (int i = 0; i < strlen(argv[]); i++)
+    string keystring = argv[1];
+
+    for (int i = 0; i < strlen(keystring); i++)
     {
-        if (atoi(argv[i]) == 0)
+        if (atoi(keystring[i]) == 0)
         {
             printf("Usage: ./caesar key");
             return 1;
