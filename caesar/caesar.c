@@ -15,10 +15,13 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    encrypt()
+    string plaintext = get_string("plaintext:  ");
+
+    string ciphertext = encrypt(plaintext, key);
 }
 
 string encrypt(string plaintext, int key)
 {
-
+    printf("%s%i\n", plaintext, key);
+    return "";
 }
