@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <string.h>
 
 string encrypt(string plaintext, int key);
 
@@ -18,10 +19,16 @@ int main(int argc, string argv[])
     string plaintext = get_string("plaintext:  ");
 
     string ciphertext = encrypt(plaintext, key);
+
+    printf("ciphertext: %s\n", ciphertext);
 }
 
 string encrypt(string plaintext, int key)
 {
-    printf("%s%i\n", plaintext, key);
-    return "";
+    for (int i = 0; i < strlen(plaintext); i++)
+    {
+        plaintext[i] += key;
+    }
+
+    return plaintext;
 }

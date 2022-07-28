@@ -1,8 +1,10 @@
 {
     "files.associations": {
+        "*.html": "html",
         "*.css": "css",
         "*.js": "javascript",
         "cs50.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "string.h": "c"
     }
 }
