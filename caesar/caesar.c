@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 
-string encrypt(string plaintext);
+string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
@@ -11,7 +11,7 @@ int main(int argc, string argv[])
 
     if (argc != 2 || key <= 0)
     {
-        printf("Usage: ./caesar [key]");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
