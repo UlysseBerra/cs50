@@ -39,7 +39,7 @@ string encrypt(string plaintext, int key)
         key -= 26;
     }
 
-    for (int i = 0; i < strlen(plaintext); i++)
+    for (int j = 0; j < strlen(plaintext); j++)
     {
         plaintext[i] += key;
     }
