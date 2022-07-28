@@ -4,6 +4,8 @@
 #include <stdlib.h>
 #include <string.h>
 #define ABL 26
+#define ASCIIU 65
+#define ASCIIL 97
 
 string encrypt(string plaintext, int key);
 
@@ -43,15 +45,15 @@ string encrypt(string plaintext, int key)
     {
         if (isupper(ciphertext[j]))
         {
-            ciphertext[j] = ((ciphertext[j] - 65 + key) % ABL) + 65;
+            ciphertext[j] = ((ciphertext[j] - ASCIIU + key) % ABL) + ASCIIU;
         }
         else if (islower(ciphertext[j]))
         {
-            ciphertext[j] = ((ciphertext[j] - 97 + key) % ABL) + 97;
+            ciphertext[j] = ((ciphertext[j] - ASCIIL + key) % ABL) + ASCIIL;
         }
         else
         {
-            string e = "e";
+            NULL;
         }
     }
 
