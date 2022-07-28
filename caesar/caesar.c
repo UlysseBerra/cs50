@@ -18,7 +18,7 @@ int main(int argc, string argv[])
 
     for (int i = 0; i < strlen(keystring); i++)
     {
-        if (isdigit(keystring[i]))
+        if (!isdigit(keystring[i]))
         {
             printf("Usage: ./caesar key\n");
             return 1;
