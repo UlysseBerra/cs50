@@ -41,8 +41,11 @@ string encrypt(string plaintext, int key)
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
-        ciphertext[j] = (ciphertext[j] + key) % ABL;
-        // printf("%i\n", ciphertext[j]);
+        if (isupper(ciphertext[j]))
+        {
+            ciphertext[j] = (ciphertext[j] - 65 + key) % ABL;
+        }
+        else if ()
     }
 
     return ciphertext;
