@@ -8,7 +8,7 @@ string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    for (int i = 0; i < strlen(argv); i++)
+    for (int i = 0; i < strlen(argv[]); i++)
     {
         if (atoi(argv[i]) == 0)
         {
