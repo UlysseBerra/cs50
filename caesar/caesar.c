@@ -42,11 +42,12 @@ int main(int argc, string argv[])
     printf("ciphertext: %s\n", ciphertext);
 }
 
-// encrypts 
+// encrypts
 string encrypt(string plaintext, int key)
 {
     string ciphertext = plaintext;
 
+    // rotates alphabet
     for (int j = 0; j < strlen(plaintext); j++)
     {
         if (isupper(ciphertext[j]))
@@ -57,6 +58,7 @@ string encrypt(string plaintext, int key)
         {
             ciphertext[j] = ((ciphertext[j] - ASCIIL + key) % ABL) + ASCIIL;
         }
+        // idk if there's a pass keyword in C so this is it
         else
         {
             NULL;
