@@ -36,7 +36,7 @@ int main(int argc, string argv[])
 
 string encrypt(string plaintext, int key)
 {
-    string ciphertext = strcpy(plaintext);
+    string ciphertext = plaintext;
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
