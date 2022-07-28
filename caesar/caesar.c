@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#define ABL 26
 
 string encrypt(string plaintext, int key);
 
@@ -40,7 +41,7 @@ string encrypt(string plaintext, int key)
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
-        ciphertext[j] = (ciphertext[j] % 26) + key;
+        ciphertext[j] = (ciphertext[j] + key) % ABL;
         // printf("%i\n", ciphertext[j]);
     }
 
