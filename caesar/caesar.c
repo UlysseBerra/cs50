@@ -8,7 +8,7 @@ string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || atoi(argv[1]) == 0)
     {
         printf("Usage: ./caesar key\n");
         return 1;
