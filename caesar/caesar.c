@@ -36,11 +36,11 @@ int main(int argc, string argv[])
 
 string encrypt(string plaintext, int key)
 {
-    string ciphertext = plaintext;
+    string ciphertext = strcpy(plaintext);
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
-        ciphertext[j] = (plaintext[j] % 26) + key;
+        ciphertext[j] = (ciphertext[j] % 26) + key;
         // printf("%i\n", ciphertext[j]);
     }
 
