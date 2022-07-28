@@ -25,7 +25,7 @@ int main(int argc, string argv[])
 
 string encrypt(string plaintext, int key)
 {
-    if (key > 25)
+    if (key > 26)
     {
         key -= 26;
     }
