@@ -43,9 +43,16 @@ string encrypt(string plaintext, int key)
     {
         if (isupper(ciphertext[j]))
         {
-            ciphertext[j] = (ciphertext[j] - 65 + key) % ABL;
+            ciphertext[j] = ((ciphertext[j] - 65 + key) % ABL) + 65;
         }
-        else if ()
+        else if (islower(ciphertext[j]))
+        {
+            ciphertext[j] = ((ciphertext[j] - 97 + key) % ABL) + 97;
+        }
+        else
+        {
+            string e = "e";
+        }
     }
 
     return ciphertext;
