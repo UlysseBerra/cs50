@@ -7,11 +7,15 @@ string encrypt(string plaintext);
 
 int main(int argc, string argv[])
 {
-    if (!argv[1] || )
+    int key = atoi(argv[1]);
+
+    if (argvc || key <= 0 || argv[2] != '\0')
     {
-        printf("Usage: ./caesar [key]")
+        printf("Usage: ./caesar [key]");
+        return 1;
     }
-    int key = (int) argv[1];
+
+    encrypt()
 }
 
 string encrypt(string plaintext, int key)
