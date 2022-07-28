@@ -7,13 +7,13 @@ string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    int key = atoi(argv[1]);
-
-    if (argc != 2 || key <= 0)
+    if (argc != 2 || atoi(argv[1]) <= 0)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
+
+    int key = atoi(argv[1]);
 
     string plaintext = get_string("plaintext:  ");
 
