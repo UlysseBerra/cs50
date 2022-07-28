@@ -1,17 +1,21 @@
+// includes
 #include <cs50.h>
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+// defines alphabet length and ASCII numbers for capital and lowercase letters
 #define ABL 26
 #define ASCIIU 65
 #define ASCIIL 97
+
 
 string encrypt(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || atoi(argv[1]) == 0)
+    // if incorrect number of args
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -19,6 +23,7 @@ int main(int argc, string argv[])
 
     string keystring = argv[1];
 
+    // test if char is digit
     for (int i = 0; i < strlen(keystring); i++)
     {
         if (!isdigit(keystring[i]))
@@ -37,6 +42,7 @@ int main(int argc, string argv[])
     printf("ciphertext: %s\n", ciphertext);
 }
 
+// encrypts 
 string encrypt(string plaintext, int key)
 {
     string ciphertext = plaintext;
