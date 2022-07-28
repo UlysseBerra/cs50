@@ -40,7 +40,7 @@ string encrypt(string plaintext, int key)
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
-        ciphertext[j] = (plaintext[j] + key) % 26;
+        ciphertext[j] = plaintext[j] + key;
         printf("%i\n", ciphertext[j]);
     }
 
