@@ -43,5 +43,5 @@ string encrypt(string plaintext, int key)
         ciphertext[j] = (plaintext[j] + key) % 26;
     }
 
-    return plaintext;
+    return ciphertext;
 }
