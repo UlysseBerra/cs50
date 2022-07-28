@@ -36,14 +36,11 @@ int main(int argc, string argv[])
 
 string encrypt(string plaintext, int key)
 {
-    if (key > 26)
-    {
-        key -= 26;
-    }
+    string ciphertext = plaintext;
 
     for (int j = 0; j < strlen(plaintext); j++)
     {
-        plaintext[j] += key;
+        ciphertext[j] = (plaintext[j] + key) % 26;
     }
 
     return plaintext;
