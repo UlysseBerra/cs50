@@ -83,8 +83,12 @@ void print_winner(void)
 {
     candidate winner;
     int highest_vote = 0;
-    int other_vote = 0;
+
     candidate other_winner;
+    int other_vote = 0;
+
+    candidate third_winner;
+    int third_vote = 0;
 
     for (int j = 0; j < MAX; j++)
     {
@@ -95,8 +99,16 @@ void print_winner(void)
         }
         else if (candidates[j].votes == highest_vote)
         {
-            other_vote = candidates[j].votes;
-            other_winner = candidates[j];
+            if (other_vote == 0)
+            {
+                other_vote = candidates[j].votes;
+                other_winner = candidates[j];
+            }
+            else
+            {
+                third_vote = candidates[j].votes;
+                third_winner = candidates[j];
+            }
         }
     }
     printf("%s\n", winner.name);
@@ -105,5 +117,10 @@ void print_winner(void)
     {
         printf("%s\n", other_winner.name);
     }
+    if (third_vote != 0)
+    {
+        printf("%s\n", third_winner.name);
+    }
+
     return;
 }
