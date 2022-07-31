@@ -49,7 +49,9 @@ int main(int argc, string argv[])
 
     for (int test = 0; test < candidate_count; test++)
     {
-    printf("", candidates);
+        printf("%s\n", candidates[test].name);
+        printf("%i\n", candidates[test].votes);
+        printf("\n");
     }
 
     // Loop over all voters
