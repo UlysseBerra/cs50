@@ -100,5 +100,10 @@ void print_winner(void)
         }
     }
     printf("%s\n", winner.name);
+
+    if (other_vote != 0)
+    {
+        printf("%s\n", other_winner.name);
+    }
     return;
 }
