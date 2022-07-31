@@ -47,13 +47,6 @@ int main(int argc, string argv[])
 
     int voter_count = get_int("Number of voters: ");
 
-    for (int test = 0; test < candidate_count; test++)
-    {
-        printf("%s\n", candidates[test].name);
-        printf("%i\n", candidates[test].votes);
-        printf("\n");
-    }
-
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
     {
@@ -75,6 +68,7 @@ bool vote(string name, int voter_count)
 {
     for (int i = 0; i < voter_count; i++)
     {
+        printf("%s")
         if (!strcmp(name, candidates[i].name))
         {
             candidates[i].votes++;
