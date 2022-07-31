@@ -74,10 +74,6 @@ bool vote(string name, int voter_count)
             candidates[i].votes++;
             return true;
         }
-        else
-        {
-            break;
-        }
     }
 
     return false;
