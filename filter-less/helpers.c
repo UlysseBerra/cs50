@@ -118,11 +118,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[height][width].rgbtRed = (int)round((tmp[height][width].rgbtRed + tmp[height - 1][width].rgbtRed
                                             + tmp[height][width - 1].rgbtRed + tmp[height - 1][width - 1].rgbtRed) / 4);
     image[height][width].rgbtGreen = (int)round((tmp[height][width].rgbtGreen + tmp[height - 1][width].rgbtGreen
-                                            + tmp[height][width - 1].rgbtGreen + tmp[height - 1][width - 1].rgbtGreen)
-                                            / 4);
+                                    + tmp[height][width - 1].rgbtGreen + tmp[height - 1][width - 1].rgbtGreen)
+                                    / 4);
     image[height][width].rgbtBlue = (int)round((tmp[height][width].rgbtBlue + tmp[height - 1][width].rgbtBlue
-                                            + tmp[height][width - 1].rgbtBlue + tmp[height - 1][width - 1].rgbtBlue)
-                                            / 4);
+                                    + tmp[height][width - 1].rgbtBlue + tmp[height - 1][width - 1].rgbtBlue)
+                                    / 4);
 
     // first row
     for (int i = 1; i < width - 1; i++)
