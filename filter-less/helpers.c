@@ -79,9 +79,9 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width / 2; j++)
         {
-            swap(&image[i][j].rgbtRed, &image[i][width - j].rgbtRed);
-            swap(&image[i][j].rgbtGreen, &image[i][width - j].rgbtGreen);
-            swap(&image[i][j].rgbtBlue, &image[i][width - j].rgbtBlue);
+            swap(&image[i][j].rgbtRed, &image[i][width - 1 - j].rgbtRed);
+            swap(&image[i][j].rgbtGreen, &image[i][width - 1 - j].rgbtGreen);
+            swap(&image[i][j].rgbtBlue, &image[i][width - 1 - j].rgbtBlue);
         }
     }
     return;
