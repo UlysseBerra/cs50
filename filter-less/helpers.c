@@ -64,11 +64,11 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < width/2; j++)
+        for (int j = 0; j < width / 2; j++)
         {
-            swap(&image[i][j].rgbtRed, &image[i][width-j].rgbtRed);
-            swap(&image[i][j].rgbtGreen, &image[i][width-j].rgbtGreen);
-            swap(&image[i][j].rgbtBlue, &image[i][width-j].rgbtBlue);
+            swap(&image[i][j].rgbtRed, &image[i][width - j].rgbtRed);
+            swap(&image[i][j].rgbtGreen, &image[i][width - j].rgbtGreen);
+            swap(&image[i][j].rgbtBlue, &image[i][width - j].rgbtBlue);
         }
     }
     return;
@@ -92,15 +92,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // top right corner
     image[0][0].rgbtRed = (int)round((tmp[0][0].rgbtRed + tmp[1][0].rgbtRed + tmp[0][1].rgbtRed + tmp[1][1].rgbtRed)
-                                        / 4);
+                                      / 4);
     image[0][0].rgbtGreen = (int)round((tmp[0][0].rgbtGreen + tmp[1][0].rgbtGreen + tmp[0][1].rgbtGreen
                                         + tmp[1][1].rgbtGreen) / 4);
     image[0][0].rgbtBlue = (int)round((tmp[0][0].rgbtBlue + tmp[1][0].rgbtBlue + tmp[0][1].rgbtBlue + tmp[1][1].rgbtBlue)
-                                        / 4);
+                                       / 4);
 
     // bottom right corner
     image[height][0].rgbtRed = (int)round((tmp[height][0].rgbtRed + tmp[height - 1][0].rgbtRed + tmp[height][1].rgbtRed
-                                            + tmp[height - 1][1].rgbtRed) / 4);
+                                         + tmp[height - 1][1].rgbtRed) / 4);
     image[height][0].rgbtGreen = (int)round((tmp[height][0].rgbtGreen + tmp[height - 1][0].rgbtGreen
                                             + tmp[height][1].rgbtGreen + tmp[height - 1][1].rgbtGreen) / 4);
     image[height][0].rgbtBlue = (int)round((tmp[height][0].rgbtBlue + tmp[height - 1][0].rgbtBlue
