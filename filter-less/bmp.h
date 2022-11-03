@@ -2,7 +2,7 @@
 
 #include <stdint.h>
 
-// These data types are essentially aliases for C/C++ primitive data types. 
+// These data types are essentially aliases for C/C++ primitive data types.
 // Adapted from http://msdn.microsoft.com/en-us/library/cc230309.aspx.
 // See https://en.wikipedia.org/wiki/C_data_types#stdint.h for more on stdint.h.
 
