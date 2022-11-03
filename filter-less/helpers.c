@@ -118,9 +118,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     // last row
     for (int i = 1; i < width - 1; i++)
     {
-        image[width][i].rgbtRed = (int)round((tmp[width][i - 1].rgbtRed + tmp[width][i].rgbtRed + tmp[width][i + 1].rgbtRed + tmp[width - 1][i - 1].rgbtRed + tmp[width - 1][i].rgbtRed + tmp[width - 1][i + 1].rgbtRed) / 6);
-        image[width][i].rgbtGreen = (int)round((tmp[width][i - 1].rgbtGreen + tmp[width][i].rgbtGreen + tmp[width][i + 1].rgbtGreen + tmp[width - 1][i - 1].rgbtGreen + tmp[width -1][i].rgbtGreen + tmp[width - 1][i + 1].rgbtGreen) / 6);
-        image[width][i].rgbtBlue = (int)round((tmp[width][i - 1].rgbtBlue + tmp[width][i].rgbtBlue + tmp[width][i + 1].rgbtBlue + tmp[width - 1][i - 1].rgbtBlue + tmp[width - 1][i].rgbtBlue + tmp[width - 1][i + 1].rgbtBlue) / 6);
+        image[height][i].rgbtRed = (int)round((tmp[height][i - 1].rgbtRed + tmp[height][i].rgbtRed + tmp[height][i + 1].rgbtRed + tmp[height - 1][i - 1].rgbtRed + tmp[height - 1][i].rgbtRed + tmp[height - 1][i + 1].rgbtRed) / 6);
+        image[height][i].rgbtGreen = (int)round((tmp[height][i - 1].rgbtGreen + tmp[height][i].rgbtGreen + tmp[height][i + 1].rgbtGreen + tmp[height - 1][i - 1].rgbtGreen + tmp[height -1][i].rgbtGreen + tmp[height - 1][i + 1].rgbtGreen) / 6);
+        image[height][i].rgbtBlue = (int)round((tmp[height][i - 1].rgbtBlue + tmp[height][i].rgbtBlue + tmp[height][i + 1].rgbtBlue + tmp[height - 1][i - 1].rgbtBlue + tmp[height - 1][i].rgbtBlue + tmp[height - 1][i + 1].rgbtBlue) / 6);
     }
 
     // first column
@@ -138,6 +138,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         image[i][width].rgbtGreen = (int) round((tmp[i - 1][width].rgbtGreen + tmp[i][width].rgbtGreen + tmp[i + 1][width].rgbtGreen + tmp[i - 1][width - 1].rgbtGreen + tmp[i][width - 1].rgbtGreen + tmp[i + 1][width - 1].rgbtGreen) / 6);
         image[i][width].rgbtBlue = (int) round((tmp[i - 1][width].rgbtBlue + tmp[i][width].rgbtBlue + tmp[i + 1][width].rgbtBlue + tmp[i - 1][width - 1].rgbtBlue + tmp[i][width - 1].rgbtBlue + tmp[i + 1][width - 1].rgbtBlue) / 6);
     }
+
+    // rest of pixels
 
     return;
 }
