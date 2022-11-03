@@ -31,39 +31,39 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 // Convert image to sepia
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
-    for (int i = 0; i <= height; i++)
-    {
-        for (int j = 0; j <= width; j++)
-        {
-            // calculate colors
-            double sepiaRed = (int)round(.393 * image[i][j].rgbtRed + .769 * image[i][j].rgbtGreen
-                                         + 189 * image[i][j].rgbtBlue);
-            double sepiaGreen = (int)round(.349 * image[i][j].rgbtRed + .686 * image[i][j].rgbtGreen
-                                           + .168 * image[i][j].rgbtBlue);
-            double sepiaBlue = (int)round(.272 * image[i][j].rgbtRed + .534 * image[i][j].rgbtGreen
-                                          + .131 * image[i][j].rgbtBlue);
+    for (int i = 0; i < height; i++) {
+    for (int j = 0; j < width; j++) {
+        // gets the values of each color in the image
+        int red = image[i][j].rgbtRed;
+        int blue = image[i][j].rgbtBlue;
+        int green = image[i][j].rgbtGreen;
 
-            // make sure no value is over 255
-            if (sepiaRed > 255)
-            {
-                sepiaRed = 255;
-            }
-            if (sepiaGreen > 255)
-            {
-                sepiaGreen = 255;
-            }
-            if (sepiaBlue > 255)
-            {
-                sepiaBlue = 255;
-            }
+        // gets the sepia value of the pixels
+        int sepiaRed = round(0.393 * red + 0.769 * green + 0.189 * blue);
 
-            // making the pixels sepia
-            image[i][j].rgbtRed = sepiaRed;
-            image[i][j].rgbtGreen = sepiaGreen;
-            image[i][j].rgbtBlue = sepiaBlue;
+        int sepiaGreen = round(0.349 * red + 0.686 * green + 0.168 * blue);
+
+        int sepiaBlue = round(0.272 * red + 0.534 * green + 0.131 * blue);
+
+        if (sepiaRed >= 256) {
+            sepiaRed = 255;
+
         }
+
+        if (sepiaGreen >= 256) {
+            sepiaGreen = 255;
+
+        }
+
+        if (sepiaBlue >= 256) {
+            sepiaBlue = 255;
+
+        }
+        image[i][j].rgbtRed = sepiaRed;
+        image[i][j].rgbtBlue = sepiaBlue;
+        image[i][j].rgbtGreen = sepiaGreen;
+
     }
-    return;
 }
 
 // Reflect image horizontally
