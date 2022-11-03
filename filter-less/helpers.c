@@ -63,10 +63,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width/2; j++)
         {
-            for (int k = width; k >= width/2; k--)
-            {
-                swap()
-            }
+            swap(&image[i][j].rbgtRed, &image[i][width-j])
         }
     }
     return;
