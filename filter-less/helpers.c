@@ -1,7 +1,7 @@
 #include "helpers.h"
 
 // Swap two values
-void swap(int *a, int *b)
+void swap(BYTE *a, BYTE *b)
 {
     int tmp = *a;
     *a = *b;
