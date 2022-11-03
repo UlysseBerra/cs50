@@ -3,7 +3,7 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    printf(image[0][0].rgbtred)
+    printf(image[0][0].rgbtRed);
     return;
 }
 
