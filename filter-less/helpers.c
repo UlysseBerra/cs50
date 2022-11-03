@@ -32,38 +32,39 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     for (int i = 0; i < height; i++) {
-    for (int j = 0; j < width; j++) {
-        // gets the values of each color in the image
-        int red = image[i][j].rgbtRed;
-        int blue = image[i][j].rgbtBlue;
-        int green = image[i][j].rgbtGreen;
+        for (int j = 0; j < width; j++) {
+            
+            // gets the values of each color in the image
+            int red = image[i][j].rgbtRed;
+            int blue = image[i][j].rgbtBlue;
+            int green = image[i][j].rgbtGreen;
 
-        // gets the sepia value of the pixels
-        int sepiaRed = round(0.393 * red + 0.769 * green + 0.189 * blue);
+            // gets the sepia value of the pixels
+            int sepiaRed = round(0.393 * red + 0.769 * green + 0.189 * blue);
 
-        int sepiaGreen = round(0.349 * red + 0.686 * green + 0.168 * blue);
+            int sepiaGreen = round(0.349 * red + 0.686 * green + 0.168 * blue);
 
-        int sepiaBlue = round(0.272 * red + 0.534 * green + 0.131 * blue);
+           int sepiaBlue = round(0.272 * red + 0.534 * green + 0.131 * blue);
 
-        if (sepiaRed >= 256) {
-            sepiaRed = 255;
+            if (sepiaRed >= 256) {
+                sepiaRed = 255;
+            }
+
+            if (sepiaGreen >= 256) {
+                sepiaGreen = 255;
+            }
+
+            if (sepiaBlue >= 256) {
+                sepiaBlue = 255;
+            }
+
+            image[i][j].rgbtRed = sepiaRed;
+            image[i][j].rgbtBlue = sepiaBlue;
+            image[i][j].rgbtGreen = sepiaGreen;
 
         }
-
-        if (sepiaGreen >= 256) {
-            sepiaGreen = 255;
-
-        }
-
-        if (sepiaBlue >= 256) {
-            sepiaBlue = 255;
-
-        }
-        image[i][j].rgbtRed = sepiaRed;
-        image[i][j].rgbtBlue = sepiaBlue;
-        image[i][j].rgbtGreen = sepiaGreen;
-
     }
+    return;
 }
 
 // Reflect image horizontally
