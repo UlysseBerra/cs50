@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
     // top right corner
     image[0][0].rgbtRed = (int)round((tmp[0][0].rgbtRed + tmp[1][0].rgbtRed + tmp[0][1].rgbtRed + tmp[1][1].rgbtRed)
-                                       / 4);
+                                      / 4);
     image[0][0].rgbtGreen = (int)round((tmp[0][0].rgbtGreen + tmp[1][0].rgbtGreen + tmp[0][1].rgbtGreen
                                         + tmp[1][1].rgbtGreen) / 4);
     image[0][0].rgbtBlue = (int)round((tmp[0][0].rgbtBlue + tmp[1][0].rgbtBlue + tmp[0][1].rgbtBlue + tmp[1][1].rgbtBlue)
@@ -145,15 +145,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                                                  + tmp[height][i + 1].rgbtGreen + tmp[height - 1][i - 1].rgbtGreen
                                                  + tmp[height - 1][i].rgbtGreen + tmp[height - 1][i + 1].rgbtGreen) / 6);
         image[height][i].rgbtBlue = (int)round((tmp[height][i - 1].rgbtBlue + tmp[height][i].rgbtBlue
-                                               + tmp[height][i + 1].rgbtBlue + tmp[height - 1][i - 1].rgbtBlue
-                                               + tmp[height - 1][i].rgbtBlue + tmp[height - 1][i + 1].rgbtBlue) / 6);
+                                                + tmp[height][i + 1].rgbtBlue + tmp[height - 1][i - 1].rgbtBlue
+                                                + tmp[height - 1][i].rgbtBlue + tmp[height - 1][i + 1].rgbtBlue) / 6);
     }
 
     // first column
     for (int i = 1; i < height - 1; i ++)
     {
         image[i][0].rgbtRed = (int)round((tmp[i - 1][0].rgbtRed + tmp[i][0].rgbtRed + tmp[i + 1][0].rgbtRed
-                                           + tmp[i - 1][1].rgbtRed + tmp[i][1].rgbtRed + tmp[i + 1][1].rgbtRed) / 6);
+                                          + tmp[i - 1][1].rgbtRed + tmp[i][1].rgbtRed + tmp[i + 1][1].rgbtRed) / 6);
         image[i][0].rgbtGreen = (int)round((tmp[i - 1][0].rgbtGreen + tmp[i][0].rgbtGreen + tmp[i + 1][0].rgbtGreen
                                             + tmp[i - 1][1].rgbtGreen + tmp[i][1].rgbtGreen + tmp[i + 1][1].rgbtGreen) / 6);
         image[i][0].rgbtBlue = (int)round((tmp[i - 1][0].rgbtBlue + tmp[i][0].rgbtBlue + tmp[i + 1][0].rgbtBlue
