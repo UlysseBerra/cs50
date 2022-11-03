@@ -1,4 +1,5 @@
 #include "helpers.h"
+#include <math.h>
 
 // Swap two values
 void swap(BYTE *a, BYTE *b)

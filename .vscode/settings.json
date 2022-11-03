@@ -5,7 +5,9 @@
         "cs50.h": "c",
         "stdio.h": "c",
         "string.h": "c",
-        "string_view": "c"
+        "string_view": "c",
+        "bmp.h": "c",
+        "stdlib.h": "c"
     },
     "gitdoc.enabled": true
 }
