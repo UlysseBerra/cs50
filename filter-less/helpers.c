@@ -78,7 +78,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            
+            int avg_red_near = (int)round(image[i-1][i-1].rgbtRed + image[i-1][i].rgbtRed + image[i-1][i+1].rgbtRed + image[i][i-1].rgbtRed + image[i][i].rgbtRed + image[i][i+1].rgbtRed + image[i+1][i-1].rgbtRed + image[i+1][i].rgbtRed + image[i+1][i+1].rgbtRed)
         }
     }
     return;
