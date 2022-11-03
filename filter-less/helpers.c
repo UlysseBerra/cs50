@@ -74,16 +74,13 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // go through rows
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            int avg_red_near = (int)round(image[i-1][i-1].rgbtRed + image[i-1][i].rgbtRed + image[i-1][i+1].rgbtRed + image[i][i-1].rgbtRed + image[i][i].rgbtRed + image[i][i+1].rgbtRed + image[i+1][i-1].rgbtRed + image[i+1][i].rgbtRed + image[i+1][i+1].rgbtRed);
-            int avg_green_near = (int)round(image[i-1][i-1].rgbtGreen + image[i-1][i].rgbtGreen + image[i-1][i+1].rgbtGreen + image[i][i-1].rgbtGreen + image[i][i].rgbtGreen + image[i][i+1].rgbtGreen + image[i+1][i-1].rgbtGreen + image[i+1][i].rgbtGreen + image[i+1][i+1].rgbtGreen);
-            int avg_blue_near = (int)round(image[i-1][i-1].rgbtBlue + image[i-1][i].rgbtBlue + image[i-1][i+1].rgbtBlue + image[i][i-1].rgbtBlue + image[i][i].rgbtBlue + image[i][i+1].rgbtBlue + image[i+1][i-1].rgbtBlue + image[i+1][i].rgbtBlue + image[i+1][i+1].rgbtBlue);
+
         }
     }
     return;
 }
-
-// TODO: avoid segfault by not stopping if pixel on border
