@@ -6,5 +6,6 @@
         "stdio.h": "c",
         "string.h": "c",
         "string_view": "c"
-    }
+    },
+    "gitdoc.enabled": true
 }
