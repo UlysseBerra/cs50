@@ -1,3 +1,4 @@
+// imports (added math.h for the round() function)
 #include "helpers.h"
 #include <math.h>
 
@@ -107,6 +108,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             if (i == 0)
             {
+                // top left corner
                 if (j == 0)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i + 1][j].rgbtRed + original[i]
@@ -116,6 +118,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i + 1][j].rgbtBlue + original[i]
                                                   [j + 1].rgbtBlue + original[i + 1][j + 1].rgbtBlue) / 4.0);
                 }
+                // top right corner
                 else if (j == width - 1)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i + 1][j].rgbtRed + original[i]
@@ -125,6 +128,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i + 1][j].rgbtBlue + original[i]
                                                   [j - 1].rgbtBlue + original[i + 1][j - 1].rgbtBlue) / 4.0);
                 }
+                // first row
                 else
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i + 1][j].rgbtRed + original[i]
@@ -140,36 +144,39 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             else if (i > 0 && i < height - 1)
             {
+                // first column
                 if (j == 0)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i + 1][j].rgbtRed + original[i - 1]
                                                  [j].rgbtRed + original[i + 1][j + 1].rgbtRed + original[i]
                                                  [j + 1].rgbtRed + original[i - 1][j + 1].rgbtRed) / 6.0);
-                    image[i][j].rgbtGreen = round((original[i][j].rgbtGreen + original[i + 1][j].rgbtGreen + original[i- 1]
+                    image[i][j].rgbtGreen = round((original[i][j].rgbtGreen + original[i + 1][j].rgbtGreen + original[i - 1]
                                                    [j].rgbtGreen + original[i + 1][j + 1].rgbtGreen + original[i]
                                                    [j + 1].rgbtGreen + original[i - 1][j + 1].rgbtGreen) / 6.0);
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i + 1][j].rgbtBlue + original[i - 1]
                                                   [j].rgbtBlue + original[i + 1][j + 1].rgbtBlue + original[i]
                                                   [j + 1].rgbtBlue + original[i - 1][j + 1].rgbtBlue) / 6.0);
                 }
+                // last column
                 else if (j == width - 1)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i + 1][j].rgbtRed + original[i - 1]
                                                  [j].rgbtRed + original[i + 1][j - 1].rgbtRed + original[i][j - 1].rgbtRed + original[i - 1][j - 1].rgbtRed) / 6.0);
-                    image[i][j].rgbtGreen = round((original[i][j].rgbtGreen + original[i + 1][j].rgbtGreen + original[i- 1]
+                    image[i][j].rgbtGreen = round((original[i][j].rgbtGreen + original[i + 1][j].rgbtGreen + original[i - 1]
                                                    [j].rgbtGreen + original[i + 1][j - 1].rgbtGreen + original[i]
                                                    [j - 1].rgbtGreen + original[i - 1][j - 1].rgbtGreen) / 6.0);
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i + 1][j].rgbtBlue + original[i - 1]
                                                   [j].rgbtBlue + original[i + 1][j - 1].rgbtBlue + original[i]
                                                   [j - 1].rgbtBlue + original[i - 1][j - 1].rgbtBlue) / 6.0);
                 }
+                // rest of pixels
                 else
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i][j - 1].rgbtRed + original[i]
                                                  [j + 1].rgbtRed + original[i + 1][j - 1].rgbtRed + original[i + 1][j + 1].rgbtRed + original[i + 1]
                                                  [j].rgbtRed + original[i - 1][j - 1].rgbtRed + original[i - 1][j + 1].rgbtRed + original[i - 1][j].rgbtRed) / 9.0);
                     image[i][j].rgbtGreen = round((original[i][j].rgbtGreen + original[i][j - 1].rgbtGreen + original[i]
-                                                   [j + 1].rgbtGreen + original[i + 1][j - 1].rgbtGreen + original[i + 1][j + 1].rgbtGreen+ original[i + 1]
+                                                   [j + 1].rgbtGreen + original[i + 1][j - 1].rgbtGreen + original[i + 1][j + 1].rgbtGreen + original[i + 1]
                                                    [j].rgbtGreen + original[i - 1][j - 1].rgbtGreen + original[i - 1][j + 1].rgbtGreen + original[i - 1][j].rgbtGreen) / 9.0);
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i][j - 1].rgbtBlue + original[i]
                                                   [j + 1].rgbtBlue + original[i + 1][j - 1].rgbtBlue + original[i + 1][j + 1].rgbtBlue + original[i + 1]
@@ -178,6 +185,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             }
             else if (i == height - 1)
             {
+                // bottom left corner
                 if (j == 0)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i - 1][j].rgbtRed + original[i]
@@ -187,6 +195,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i - 1][j].rgbtBlue + original[i]
                                                   [j + 1].rgbtBlue + original[i - 1][j + 1].rgbtBlue) / 4.0);
                 }
+                // bottom right corner
                 else if (j == width - 1)
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i - 1][j].rgbtRed + original[i]
@@ -196,6 +205,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     image[i][j].rgbtBlue = round((original[i][j].rgbtBlue + original[i - 1][j].rgbtBlue + original[i]
                                                   [j - 1].rgbtBlue + original[i - 1][j - 1].rgbtBlue) / 4.0);
                 }
+                // last row
                 else
                 {
                     image[i][j].rgbtRed = round((original[i][j].rgbtRed + original[i - 1][j].rgbtRed + original[i]
