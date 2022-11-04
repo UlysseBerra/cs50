@@ -90,6 +90,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    // creating copy for reading
     RGBTRIPLE original[height][width];
     for (int i = 0; i < height; i++)
     {
@@ -99,6 +100,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    // making the colors the average of adjacent pixels
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
