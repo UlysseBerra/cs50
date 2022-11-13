@@ -23,20 +23,7 @@ int main(int argc, char *argv[])
     }
 
     BYTE bytes[3];
-    for (int i = 0; i < (int)round(sizeof(file) / 512); i = i + 512)
-    {
-        // check if file is jpeg
-        fread(bytes, sizeof(BYTE), 3, file);
-
-        if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
-        {
-            printf("Yes, possibly\n");
-        }
-        else
-        {
-            printf("No\n");
-        }
-    }
+   
 
     // close file and free memory
 
