@@ -23,13 +23,8 @@ int main(int argc, char *argv[])
     }
 
     BYTE bytes[3];
-   
 
-    // close file and free memory
 
+    // close file
     fclose(file);
-    free(bytes);
-
-
-
 }
