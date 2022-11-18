@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
-#include <math.h>
 
 typedef uint8_t BYTE;
 
 int main(int argc, char *argv[])
 {
-
     // check usage
     if (argc != 2)
     {
@@ -15,25 +13,58 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // open file
-    FILE *file = fopen(argv[1], "r");
-    if (!file)
+    else
     {
-        return 1;
-    }
+        // open input file
+        FILE *infile = fopen(argv[1], "r");
 
-    BYTE bytes[3];
-
-    for (int i = 0; i < sizeof(file); i++)
-    {
-        fread(bytes, sizeof(BYTE), 3, file);
-        if (bytes[0] == 0xff && bytes[1] == 0xd8 && bytes[2] == 0xff)
+        if (!infile || infile == NULL)
         {
-            printf("1");
+            printf("Couldn't open file.");
+            return 2;
         }
+
+        // initialise variables
+        BYTE buffer[512];
+        int count_image = 0;
+        FILE *outfile = NULL;
+        char filename[8];
+
+        // until end of file is reached
+        while (fread(&buffer, 512, 1, infile) == 1)
+        {
+            // if start of jpg detected (0xff 0xd8 0xff 0xe*)
+            if (buffer[0] == 0xff &&
+                buffer[1] == 0xd8 &&
+                buffer[2] == 0xff &&
+                buffer[3] >= 0xe0 &&
+                buffer[3] <= 0xef)
+            {
+                // if not first jpg, close previous file
+                if (count_image != 0)
+                {
+                    fclose(outfile);
+                }
+
+                // name and create file
+                sprintf(filename, "%03i.jpg", count_image);
+                outfile = fopen(filename, "w");
+
+                // increment counter
+                count_image++;
+            }
+
+            // write to file
+            if (count_image != 0)
+            {
+                fwrite(&buffer, 512, 1, outfile);
+            }
+        }
+
+        // close files
+        fclose(infile);
+        fclose(outfile);
+
+        return 0;
     }
-
-
-    // close file
-    fclose(file);
 }
