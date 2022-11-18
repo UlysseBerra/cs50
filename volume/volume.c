@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
     fwrite(&header, HEADER_SIZE, 1, output);
 
     // TODO: Read samples from input file and write updated data to output file
-    BYTE buffer;
+    int16_t buffer;
     while (fread(&buffer, sizeof(int16_t), 1, input))
     {
         buffer *= factor;
