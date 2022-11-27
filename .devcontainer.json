@@ -18,9 +18,12 @@
   ],
   "forwardPorts": [
     5000,
-    8080
+    5900,
+    6081,
+    8080,
+    8082
   ],
-  "image": "ghcr.io/cs50/codespace:0e22b9d17edca315d2d30abcaa828df98f7721eb",
+  "image": "ghcr.io/cs50/codespace:694c6c524ceb9dcca150ce1d278b5fa0c61b8a47",
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
   "settings": {
     "C_Cpp.autocomplete": "Disabled",
