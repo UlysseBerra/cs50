@@ -1,6 +1,8 @@
 import cs50
 
 # Get the amount of cents owed
+
+
 def get_cents():
     cents = 0
 
@@ -13,44 +15,53 @@ def get_cents():
     return cents
 
 # Find how many quarters
+
+
 def calculate_quarters(cents):
     quarters = 0
 
-    while :
+    while cents >= 25:
         cents = cents - 25
-        quarters +=1
+        quarters += 1
 
     return quarters
 
 # Find how many dimes
+
+
 def calculate_dimes(cents):
     dimes = 0
 
-    for k in range(11):
+    while cents >= 10:
         cents = cents - 10
         dimes += 1
 
     return dimes
 
 # Find how many nickels
+
+
 def calculate_nickels(cents):
     nickels = 0
 
-    for l in range(6):
+    while cents >= 5:
         cents = cents - 5
         nickels += 1
 
     return nickels
 
 # Find how many pennies
+
+
 def calculate_pennies(cents):
     pennies = 0
 
-    for m in range(2):
+    while cents >= 1:
         cents = cents - 1
         pennies += 1
 
     return pennies
+
 
 def main():
     # Ask how many cents the customer is owed
@@ -77,5 +88,6 @@ def main():
 
     # Print total number of coins to give the customer
     print(coins)
+
 
 main()
