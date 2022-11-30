@@ -1,10 +1,8 @@
+from cs50 import get_int
+
 # prompt user for input until valid input is given
 while True:
-    n = input("Height: ")
-    try:
-        int(n)
-    except:
-        pass
+    n = get_int("Height: ")
     if n >= 1 and n <= 8:
         break
 
