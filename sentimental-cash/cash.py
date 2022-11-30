@@ -16,7 +16,7 @@ def get_cents():
 def calculate_quarters(cents):
     quarters = 0
 
-    for i in range(26):
+    for j in range(26):
         cents = cents - 25
         quarters +=1
 
@@ -26,7 +26,7 @@ def calculate_quarters(cents):
 def calculate_dimes(cents):
     dimes = 0
 
-    for i in range(11):
+    for k in range(11):
         cents = cents - 10
         dimes += 1
 
@@ -36,7 +36,7 @@ def calculate_dimes(cents):
 def calculate_nickels(cents):
     nickels = 0
 
-    for i in range(6):
+    for l in range(6):
         cents = cents - 5
         nickels += 1
 
@@ -46,7 +46,7 @@ def calculate_nickels(cents):
 def calculate_pennies(cents):
     pennies = 0
 
-    for i in range(2):
+    for m in range(2):
         cents = cents - 1
         pennies += 1
 
