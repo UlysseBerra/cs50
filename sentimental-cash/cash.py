@@ -16,10 +16,11 @@ def get_cents():
 def calculate_quarters(cents):
     quarters = 0
 
-    for j in range(26):
+    for j in range(25):
         cents = cents - 25
         quarters +=1
 
+    print(quarters)
     return quarters
 
 # Find how many dimes
