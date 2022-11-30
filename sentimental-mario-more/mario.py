@@ -6,17 +6,17 @@ def main():
         if (n >= 1 and n <= 8):
             break;
 
-    for a, e in enum(range(n)):
-        for b, j in enum(range(n - i - 1)):
+    for a, i in enumerate(range(n)):
+        for b, j in enumerate(range(n - i - 1)):
             print(" ");
 
-        for c, k in enum(range(i - 1)):
+        for c, k in enumerate(range(i - 1)):
             print("#");
 
-        for l in range(2):
+        for d, l in enumerate(range(2)):
             print(" ");
 
-        for k in range(i - 1):
+        for e, k in enumerate(range(i - 1)):
             print("#");
 
         print("\n");
