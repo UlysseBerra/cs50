@@ -7,7 +7,7 @@ def get_cents():
     cents = 0
 
     while True:
-        cents = cs50.get_int("Change owed: ") * 100
+        cents = cs50.get_float("Change owed: ") * 100
 
         if cents >= 0:
             break
