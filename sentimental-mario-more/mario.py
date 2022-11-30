@@ -1,25 +1,37 @@
 def main():
-    n: int = 0;
+    # Get height from standard input
+    n = 0
 
     while True:
-        n = int(input("Height: "));
-        if (n >= 1 and n <= 8):
-            break;
+        n = int(input("Height: "))
 
-    for a, i in enumerate(range(n)):
-        for b, j in enumerate(range(n - i - 1)):
-            print(" ", end='');
+        if n >= 1 and n <= 8:
+            break
 
-        for c, k in enumerate(range(i - 1)):
-            print("#", end='');
+    # Print out newlines
+    for a, i in enumerate(range(0, n, 1)):
+        # Print out indentation
+        for b, j in enumerate(range(0, n - i - 1, 1)):
+            printf(" ");
 
-        for d, l in enumerate(range(2)):
-            print(" ", end='');
+        // Print out hashes for first pyramid
+        for (int k = 0; k <= i; k++)
+        {
+            printf("#");
+        }
 
-        for e, k in enumerate(range(i - 1)):
-            print("#", end='');
+        // Print out spacing in between pyramids
+        for (int l = 0; l < 2; l++)
+        {
+            printf(" ");
+        }
 
-        print("\n");
+        // Print out hashes for second pyramid
+        for (int k = 0; k <= i; k++)
+        {
+            printf("#");
+        }
 
-if __name__ == "__main__":
-    main();
+        printf("\n");
+    }
+}
