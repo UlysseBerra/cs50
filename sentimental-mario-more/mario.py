@@ -6,11 +6,11 @@ def main():
         if (n >= 1 and n <= 8):
             break;
 
-    for i in range(n):
-        for j in range(n - i - 1):
+    for a, e in enum(range(n)):
+        for b, j in enum(range(n - i - 1)):
             print(" ");
 
-        for k in range(i - 1):
+        for c, k in enum(range(i - 1)):
             print("#");
 
         for l in range(2):
