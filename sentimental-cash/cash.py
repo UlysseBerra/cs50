@@ -16,7 +16,7 @@ def get_cents():
 def calculate_quarters(cents):
     quarters = 0
 
-    for j in range(25):
+    while :
         cents = cents - 25
         quarters +=1
 
