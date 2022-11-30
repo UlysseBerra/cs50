@@ -1,6 +1,7 @@
 # prompt user for input until valid input is given
 while True:
-    n = int(input("Height: "))
+    try:
+        n = int(input("Height: "))
     if n >= 1 and n <= 8:
         break
 
