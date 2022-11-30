@@ -25,3 +25,5 @@ def main():
             print("#", end="")
 
         print("\n")
+
+main()
