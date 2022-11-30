@@ -30,8 +30,8 @@ def get_sentences(text_in):
     sentences = 0
     c = 0
 
-    while text_in[i] != '\0':
-        isSentence = text_in[i] == '.' or text_in[i] == '!' or text_in[i] == '?'
+    while text_in[c] != '\0':
+        isSentence = text_in[c] == '.' or text_in[c] == '!' or text_in[c] == '?'
         if isSentence:
             sentences += 1
         c += 1
@@ -58,3 +58,5 @@ def main():
         print("Grade 16+")
     else:
         print(f"Grade {int(round(index))}")
+
+main()
