@@ -2,7 +2,7 @@ def main():
     n: int = 0;
 
     while True:
-        n = input("Height:  ");
+        n = int(input("Height:  "));
         if (n >= 1 and n <= 8):
             break;
 
