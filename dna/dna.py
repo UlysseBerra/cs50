@@ -24,8 +24,9 @@ def main():
         subseq.append(header[i])
 
     for i in reader:
-        if int(i[subseq[0]]) == :
-            print("e")
+        if all(int(i[x]) == longest_match(sequence, x) for x in subseq):
+            print(i["name"])
+            return
 
     print("No match.")
     return
