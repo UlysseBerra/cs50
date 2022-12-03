@@ -8,7 +8,7 @@ def main():
         print("Wrong argument usage.")
         return 1
 
-    
+    file = open(argv[2], "r")
 
     # TODO: Read DNA sequence file into a variable
 
