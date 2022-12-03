@@ -2,25 +2,21 @@ import csv
 import sys
 
 
-def read_db():
-    file = open(sys.argv[1], "r")
-    reader = csv.DictReader(file)
-    
-
 def main():
 
     if len(sys.argv) != 3:
         print("Wrong argument usage.")
         return 1
 
-    db = read_db()
+    reader = csv.DictReader(open(sys.argv[1], "r"))
+    sequence = open(sys.argv[2], "r").read()
 
-    f = open(sys.argv[2], "r")
-    sequence = f.read()
+    agat = longest_match(sequence, "AGAT")
+    aatg = longest_match(sequence, "AATG")
+    tatc = longest_match(sequence, "TATC")
 
-    AGAT = longest_match(sequence, "AGAT")
-    AATG = longest_match(sequence, "AATG")
-    TATC = longest_match(sequence, "TATC")
+    for row in reader:
+        agat_db = row["agat"]
 
     return
 
