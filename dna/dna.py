@@ -1,6 +1,12 @@
 import csv
 import sys
 
+def get_header():
+    return next(csv.reader(open(sys.argv[1], "r")))
+
+def get_reader():
+    return csv.DictReader(open(sys.argv[1], "r"))
+
 
 def main():
 
@@ -8,14 +14,16 @@ def main():
         print("Wrong argument usage.")
         return 1
 
-    reader = csv.DictReader(open(sys.argv[1], "r"))
-    header = next(csv.DictReader(open(sys.argv[1], "r")))
-    print(header)
+    header = get_header()
+    reader = get_reader()
+    subseq = []
+
     sequence = open(sys.argv[2], "r").read()
 
-    for row in reader:
-        if int(row["AGATC"]) == longest_match(sequence, "AGATC") and int(row["AATG"]) == longest_match(sequence, "AATG") and int(row["TATC"]) == longest_match(sequence, "TATC"):
-            return
+    for i in range(1, len(header)):
+        subseq.append(header[i])
+
+    if 
 
     print("No match.")
     return
