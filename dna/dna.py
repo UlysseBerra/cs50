@@ -14,7 +14,9 @@ def main():
     for row in reader:
         if int(row["AGATC"]) == longest_match(sequence, "AGATC") and int(row["AATG"]) == longest_match(sequence, "AATG") and int(row["TATC"]) == longest_match(sequence, "TATC"):
             print(row["name"])
+            return
 
+    print("No match.")
     return
 
 
