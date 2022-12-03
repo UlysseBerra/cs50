@@ -9,7 +9,7 @@ def main():
         return 1
 
     reader = csv.DictReader(open(sys.argv[1], "r"))
-    header = next(reader)
+    header = next(csv.DictReader(open(sys.argv[1], "r")))
     print(header)
     sequence = open(sys.argv[2], "r").read()
 
