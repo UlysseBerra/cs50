@@ -12,7 +12,7 @@ def read_db():
     for row in reader:
         rows.append(row)
     file.close()
-
+    return rows
 
 def main():
 
@@ -20,15 +20,18 @@ def main():
         print("Wrong argument usage.")
         return 1
 
-    read_db()
+    db = read_db()
 
     f = open(sys.argv[2], "r")
     sequence = f.read()
-    print(sequence)
 
+    AGAT = longest_match(sequence, "AGAT")
+    AATG = longest_match(sequence, "AATG")
+    TATC = longest_match(sequence, "TATC")
 
-
-    # TODO: Check database for matching profiles
+    for column in db:
+        for row in column:
+            print(row)
 
     return
 
