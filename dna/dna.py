@@ -1,5 +1,6 @@
 import csv
 import sys
+import re
 
 
 def read_db():
@@ -11,7 +12,6 @@ def read_db():
     rows.append(header)
     for row in reader:
         rows.append(row)
-    print(rows)
     file.close()
 
 
@@ -23,10 +23,11 @@ def main():
 
     read_db()
 
-    file = open(sys.argv[2], "r")
-    sequence = file.read()
+    f = open(sys.argv[2], "r")
+    sequence = f.read()
+    print(sequence)
 
-    # TODO: Find longest match of each STR in DNA sequence
+    
 
     # TODO: Check database for matching profiles
 
