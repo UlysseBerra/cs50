@@ -9,8 +9,12 @@ def main():
         return 1
 
     file1 = open(sys.argv[1], "r")
-    data = csv.reader(file1)
-    print(data)
+    reader = csv.reader(file1)
+    rows = next(reader)
+    for row in reader:
+        rows.append(row)
+    print(rows)
+    file1.close()
 
     file2 = open(sys.argv[2], "r")
     sequence = file2.read()
