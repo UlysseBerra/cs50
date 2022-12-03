@@ -11,12 +11,9 @@ def main():
     reader = csv.DictReader(open(sys.argv[1], "r"))
     sequence = open(sys.argv[2], "r").read()
 
-    agat = longest_match(sequence, "AGAT")
-    aatg = longest_match(sequence, "AATG")
-    tatc = longest_match(sequence, "TATC")
-
     for row in reader:
-        agat_db = row["agat"]
+        if int(row["AGATC"]) == longest_match(sequence, "AGATC"):
+            print(row["name"])
 
     return
 
