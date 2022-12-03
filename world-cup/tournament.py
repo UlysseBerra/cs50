@@ -15,7 +15,8 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    # TODO: Read teams into memory from file
+    with open()
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
