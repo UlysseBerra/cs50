@@ -23,7 +23,9 @@ def main():
     for i in range(1, len(header)):
         subseq.append(header[i])
 
-    if 
+    for col in reader:
+        for row in col:
+            if int(row[i]) == longest_match(sequence, i) for i in subseq
 
     print("No match.")
     return
