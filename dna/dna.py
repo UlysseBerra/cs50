@@ -8,9 +8,12 @@ def main():
         print("Wrong argument usage.")
         return 1
 
-    file = open(argv[2], "r")
+    file1 = open(sys.argv[1], "r")
+    data = csv.reader(file1)
+    print(data)
 
-    # TODO: Read DNA sequence file into a variable
+    file2 = open(sys.argv[2], "r")
+    sequence = file2.read()
 
     # TODO: Find longest match of each STR in DNA sequence
 
