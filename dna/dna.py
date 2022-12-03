@@ -1,8 +1,10 @@
 import csv
 import sys
 
+
 def get_header():
     return next(csv.reader(open(sys.argv[1], "r")))
+
 
 def get_reader():
     return csv.DictReader(open(sys.argv[1], "r"))
