@@ -15,15 +15,12 @@ def main():
         sys.exit("Usage: python tournament.py FILENAME")
 
     teams = []
-    with open(sys.argv[1], "r") as file:
-        next(csv.reader(file))
-        reader = csv.reader(file)
-        for i in reader:
-            teams.append(i[0])
-            i[1] = int(i[1])
-        file.close()
-
-    print(teams)
+    with open(sys.argv[1], "r") as f:
+        reader = csv.DictReader(f)
+        for team in reader:
+            team["rating"] = int(team["rating"])
+            teams.append(team)
+        f.close()
 
     counts = {}
     for i in range(N):
