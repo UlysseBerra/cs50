@@ -2,22 +2,29 @@ import csv
 import sys
 
 
+def read_db():
+    file = open(sys.argv[1], "r")
+    reader = csv.reader(file)
+    header = []
+    header = next(reader)
+    rows = []
+    rows.append(header)
+    for row in reader:
+        rows.append(row)
+    print(rows)
+    file.close()
+
+
 def main():
 
     if len(sys.argv) != 3:
         print("Wrong argument usage.")
         return 1
 
-    file1 = open(sys.argv[1], "r")
-    reader = csv.reader(file1)
-    rows = next(reader)
-    for row in reader:
-        rows.append(row)
-    print(rows)
-    file1.close()
+    read_db()
 
-    file2 = open(sys.argv[2], "r")
-    sequence = file2.read()
+    file = open(sys.argv[2], "r")
+    sequence = file.read()
 
     # TODO: Find longest match of each STR in DNA sequence
 
