@@ -22,7 +22,7 @@ def main():
             teams.append(team)
         f.close()
 
-    counts = {}
+    counts = {} 
     for i in range(N):
         winner = simulate_tournament(teams)
         if winner in counts:
