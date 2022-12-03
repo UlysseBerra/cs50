@@ -1,15 +1,14 @@
 import csv
 import sys
-import re
 
 
 def read_db():
     file = open(sys.argv[1], "r")
-    reader = csv.DictReader(file)
-    header = {}
+    reader = csv.reader(file)
+    header = []
     header = next(reader)
-    rows = {}
-    rows[].append(header)
+    rows = []
+    rows.append(header)
     for row in reader:
         rows.append(row)
     file.close()
