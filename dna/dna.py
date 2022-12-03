@@ -23,7 +23,9 @@ def main():
     for i in range(1, len(header)):
         subseq.append(header[i])
 
-print(reader[1])
+    for i in reader:
+        if i[x for x in subseq] == 15:
+            print("e")
 
     print("No match.")
     return
