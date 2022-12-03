@@ -22,10 +22,6 @@ def main():
     AATG = longest_match(sequence, "AATG")
     TATC = longest_match(sequence, "TATC")
 
-    for column in db:
-        for row in column:
-            print(row)
-
     return
 
 
