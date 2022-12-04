@@ -8,15 +8,22 @@
         <script>
             let correct = () => {
                 document.querySelector(".hidden2").style.display = "flex";
+                document.querySelector(".hidden1").style.display = "none";
+                document.querySelector(".hidden3").style.display = "none";
                 document.querySelector(".right").style.backgroundColor = "green";
             }
             let incorrect1 = () => {
                 document.querySelector(".hidden1").style.display = "flex";
                 document.querySelector(".wrong1").style.backgroundColor = "red";
+                document.querySelector(".hidden2").style.display = "none";
+                document.querySelector(".hidden2").style.backgroundColor = "";
+                document.querySelector(".hidden3").style.display = "none";
             }
             let incorrect2 = () => {
                 document.querySelector(".hidden3").style.display = "flex";
                 document.querySelector(".wrong2").style.backgroundColor = "red";
+                document.querySelector(".hidden1").style.display = "none";
+                document.querySelector(".hidden2").style.display = "none";
             }
             let submit = () => {
                 let input = document.querySelector(".free")
