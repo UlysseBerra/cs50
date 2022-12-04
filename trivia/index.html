@@ -20,7 +20,11 @@
             }
             let submit = () => {
                 let input = document.querySelector(".free")
-                if (input.value.toLowerCase().trim() == "hypertextmarkuplanguage")
+                if (input.value.toLowerCase().trim() == "hypertextmarkuplanguage") {
+                    input.style.backgroundColor = "green"
+                } else {
+                    input.style.backgroundColor = "red"
+                }
             }
 
         </script>
