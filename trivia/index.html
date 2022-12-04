@@ -6,7 +6,9 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
+            let correct = () => {
+                console.log("e")
+            }
         </script>
     </head>
     <body>
@@ -18,7 +20,13 @@
             <div class="section">
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
-                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the programming language of the Internet?</h3>
+                <button onclick="incorrect1()" class="wrong">HTML</button>
+                    <p>Incorrect!</p>
+                <button onclick="correct()" class="right">JavaScript</button>
+                    <p>Correct!</p>
+                <button onclick="incorrect2()" class="wrong">CSS</button>
+                    <p>Incorrect!</p>
             </div>
 
             <div class="section">
