@@ -20,8 +20,9 @@
             }
             let submit = () => {
                 let input = document.querySelector(".free")
-                if (input.value.toLowerCase().trim() == "hypertextmarkuplanguage") {
+                if (input.value.toLowerCase().replaceAll(" ", "") == "hypertextmarkuplanguage") {
                     input.style.backgroundColor = "green"
+                    document.querySelector(".hidden4").style.display = "flex";
                 } else {
                     input.style.backgroundColor = "red"
                 }
@@ -54,6 +55,8 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <h3>What does HTML stand for?</h3>
+                <p class="hidden4">Correct!</p>
+                <p class="hidden5">Incorrect!</p>
                 <input class="free"></input>
                 <br>
                 <button onclick="submit()">Submit!</button>
