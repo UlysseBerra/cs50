@@ -9,24 +9,26 @@
             let correct = () => {
                 document.querySelector(".hidden2").style.display = "flex";
                 document.querySelector(".hidden1").style.display = "none";
+                document.querySelector(".wrong1").style.backgroundColor = "#d9edff";
                 document.querySelector(".hidden3").style.display = "none";
+                document.querySelector(".wrong2").style.backgroundColor = "#d9edff";
                 document.querySelector(".right").style.backgroundColor = "green";
             }
             let incorrect1 = () => {
                 document.querySelector(".hidden1").style.display = "flex";
                 document.querySelector(".wrong1").style.backgroundColor = "red";
                 document.querySelector(".hidden2").style.display = "none";
-                document.querySelector(".hidden2").style.backgroundColor = "white";
+                document.querySelector(".right").style.backgroundColor = "#d9edff";
                 document.querySelector(".hidden3").style.display = "none";
-                document.querySelector(".hidden3").style.backgroundColor = "white";
+                document.querySelector(".wrong2").style.backgroundColor = "#d9edff";
             }
             let incorrect2 = () => {
                 document.querySelector(".hidden3").style.display = "flex";
                 document.querySelector(".wrong2").style.backgroundColor = "red";
                 document.querySelector(".hidden1").style.display = "none";
-                document.querySelector(".hidden1").style.backgroundColor = "white";
+                document.querySelector(".right").style.backgroundColor = "#d9edff";
                 document.querySelector(".hidden2").style.display = "none";
-                document.querySelector(".hidden2").style.backgroundColor = "white";
+                document.querySelector(".wrong1").style.backgroundColor = "#d9edff";
             }
             let submit = () => {
                 let input = document.querySelector(".free")
