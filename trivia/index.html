@@ -23,8 +23,11 @@
                 if (input.value.toLowerCase().replaceAll(" ", "") == "hypertextmarkuplanguage") {
                     input.style.backgroundColor = "green"
                     document.querySelector(".hidden4").style.display = "flex";
+                    document.querySelector(".hidden5").style.display = "none";
                 } else {
                     input.style.backgroundColor = "red"
+                    document.querySelector(".hidden5").style.display = "flex";
+                    document.querySelector(".hidden4").style.display = "none";
                 }
             }
 
