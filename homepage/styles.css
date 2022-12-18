@@ -9,11 +9,11 @@ h1 {
 }
 
 h2 {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     text-align: center;
     font-family: Alegreya, serif;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 a {
@@ -24,6 +24,10 @@ a {
     text-align: center;
     font-family: Alegreya, serif;
     font-size: 30px;
+}
+
+img {
+    max-height: 400px;
 }
 
 .carousel-control-next-icon {
