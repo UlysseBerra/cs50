@@ -1,31 +1,27 @@
-#include <cs50.h>
-#include <stdio.h>
+import cs50
 
-int main(void)
-{
-    // Ask the user for an integer (1 to 8 inclusive)
-    int n;
-    do
-    {
-        n = get_int("Height: ");
-    }
-    while (n < 1 || n > 8);
 
-    // For each row
-    for (int i = 0; i < n; i++)
-    {
-        // For each column
-        // Print required spaces
-        for (int j = 0; j < ((n - i) - 1); j++)
-        {
-            printf(" ");
-        }
-        // Print hashtags required
-        for (int k = 0; k < (i + 1); k++)
-        {
-            printf("#");
-        }
-        // Go to next line
-        printf("\n");
-    }
-}
+def main():
+
+    # Get value for height
+    print('You will be asked for a number (1 to 8)')
+    print('for the height of your half-pyramid.')
+    height = 0
+
+    # asking for value as long as input is not in required range
+    while height not in range(1, 9):
+        height = cs50.get_int('Height: ')
+
+    # Print half-pyramid
+    # by adding spaces and blocks until height is reached
+    for row in range(1, height + 1):
+        for spaces in range((height - row - 1), -1, -1):
+            print(' ', end='')
+        for blocks in range(0, (row - 1)):
+            print('#', end='')
+        print('#')
+    return 0
+
+
+if __name__ == "__main__":
+    main()
