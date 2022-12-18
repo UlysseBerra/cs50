@@ -9,8 +9,8 @@ h1 {
 }
 
 h2 {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     text-align: center;
     font-family: Alegreya, serif;
     font-size: 40px;
@@ -24,6 +24,11 @@ a {
     text-align: center;
     font-family: Alegreya, serif;
     font-size: 30px;
+}
+
+img {
+    max-width: 30%;
+    height: auto;
 }
 
 .carousel-control-next-icon {
