@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+{% block main %}
+
+<h1>History of transactions</h1>
+<br />
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Type of transaction</th>
+            <th>Name of stock</th>
+            <th>Symbol of stock</th>
+            <th>Price when bought/sold</th>
+            <th>Number of shares</th>
+            <th>Date and time</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {% for item in portfolio %}
+        <tr>
+            <td>{{ item["action"] }}</td>
+            <td>{{ item["stock_name"] }}</td>
+            <td>{{ item["stock_symbol"] }}</td>
+            <td>{{ item["price"] }}</td>
+            <td>{{ item["number_shares"] }}</td>
+            <td>{{ item["date"] }}</td>
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}
