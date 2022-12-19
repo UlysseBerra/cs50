@@ -193,7 +193,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             float Gx_green;
             float Gy_red;
             float Gy_blue;
-            float Gy_green;            Gx_red = Gx_blue = Gx_green = Gy_red = Gy_blue = Gy_green = 0;            // For each pixel, loop vertical and horizontal
+            float Gy_green;
+            Gx_red = Gx_blue = Gx_green = Gy_red = Gy_blue = Gy_green = 0;            // For each pixel, loop vertical and horizontal
             for (int k = -1; k < 2; k++)
             {
                 for (int l = -1; l < 2; l++)
