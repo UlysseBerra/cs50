@@ -1,6 +1,14 @@
 #include "helpers.h"
 #include <math.h>
 
+// Swap two values
+void swap(BYTE *a, BYTE *b)
+{
+    int tmp = *a;
+    *a = *b;
+    *b = tmp;
+}
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
