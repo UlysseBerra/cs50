@@ -186,7 +186,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         {
             temp[i][j] = image[i][j];
         }
-    }    // Initialise Sobel arrays
+    }
+
+    // Initialise Sobel arrays
     int Gx[3][3] = {{-1, 0, 1}, {-2, 0, 2}, {-1, 0, 1}};
     int Gy[3][3] = {{-1, -2, -1}, {0, 0, 0}, {1, 2, 1}};
 
@@ -213,11 +215,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         continue;
                     }
+
                     // Check if pixel is outside columns
                     if (j + l < 0 || j + l >= width)
                     {
                         continue;
                     }
+
                     // Otherwise add to sums
                     Gx_red += temp[i + k][j + l].rgbtRed * Gx[k + 1][l + 1];
                     Gx_green += temp[i + k][j + l].rgbtGreen * Gx[k + 1][l + 1];
@@ -242,11 +246,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 if (blue > 255)
                 {
                     blue = 255;
-                }            // Assign new values to pixels
+                }
+
+                // Assign new values to pixels
                 image[i][j].rgbtRed = red;
                 image[i][j].rgbtGreen = green;
                 image[i][j].rgbtBlue = blue;
             }
+
             // Calculate Sobel operator
             int red = round(sqrt(Gx_red * Gx_red + Gy_red * Gy_red));
             int green = round(sqrt(Gx_green * Gx_green + Gy_green * Gy_green));
@@ -263,7 +270,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 blue = 255;
                 image[i][j].rgbtRed = red;
-            }            // Assign new values to pixels
+            }
+
+            // Assign new values to pixels
             image[i][j].rgbtGreen = green;
             image[i][j].rgbtBlue = blue;
         }
